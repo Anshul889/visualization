@@ -1,13 +1,21 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import { Button } from '../../components/CustomButton/Button'
-import {auth} from '../../firebase/firebase.utils'
+import { getAuth, signOut } from '@firebase/auth'
 
-const Profile = () => {
+
+const Profile = ({ history}) => {
+  const onSignOut = () => {
+    const auth = getAuth()
+    signOut(auth)
+    history.push('/')
+  }
+
   return (
     <div>
-      <Button onClick={() => auth.signOut()}>Logout</Button>
+      <Button onClick={() => onSignOut()}>Logout</Button>
     </div>
   )
 }
 
-export default Profile
+export default withRouter(Profile);

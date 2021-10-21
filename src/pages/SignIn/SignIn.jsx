@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import { Button } from '../../components/CustomButton/Button'
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
+import { auth } from '../../firebase/firebase.utils'
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from '@firebase/auth'
 
 const Title = styled.h3`
   width: 90%;
@@ -16,7 +21,7 @@ const Form = styled.form`
   max-width: 1080px;
   @media (max-width: 768px) {
     width: 90%;
-    margin: 0 auto
+    margin: 0 auto;
   }
 `
 
@@ -96,12 +101,18 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     try {
-      await auth.signInWithEmailAndPassword(email, password)
+      await signInWithEmailAndPassword(auth, email, password)
       this.setState({ email: '', password: '' })
       this.props.history.push('/')
     } catch (e) {
       console.log(e)
     }
+  }
+
+  signInGoogle = async () => {
+    const provider = new GoogleAuthProvider()
+    await signInWithPopup(auth, provider)
+    this.props.history.push('/')
   }
 
   render() {
@@ -122,7 +133,7 @@ class SignIn extends Component {
           <Button type='submit'>Submit</Button>
         </Form>
         <Buttons>
-          <Button onClick={signInWithGoogle}>Google</Button>
+          <Button onClick={this.signInGoogle}>Google</Button>
           <StyledLink to='signup'>
             <Button white>Sign Up</Button>
           </StyledLink>

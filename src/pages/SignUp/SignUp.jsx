@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button } from '../../components/CustomButton/Button'
 
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
+import { createUserProfileDocument } from '../../firebase/firebase.utils'
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth'
 
 const Form = styled.form`
   width: 50%;
@@ -120,7 +121,9 @@ class SignUp extends Component {
     }
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(
+      const auth = getAuth()
+      const { user } = await createUserWithEmailAndPassword(
+        auth,
         email,
         password
       )
