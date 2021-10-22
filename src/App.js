@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header/Header'
+import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 import HomePage from './pages/home/HomePage'
 import Profile from './pages/Profile/Profile'
 import SignIn from './pages/SignIn/SignIn'
@@ -10,6 +11,16 @@ import SignUp from './pages/SignUp/SignUp'
 import { setCurrentUser } from './redux/user/user.action'
 
 class App extends React.Component {
+  componentDidMount() {
+    const { setCurrentUser } = this.props
+
+    auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        await createUserProfileDocument(userAuth)
+      }
+      setCurrentUser(userAuth)
+    })
+  }
   render() {
     return (
       <div className='App'>
