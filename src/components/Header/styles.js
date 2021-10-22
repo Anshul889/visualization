@@ -67,12 +67,12 @@ export const BottomNav = styled.div`
 export const BottomNavItem = styled.div`
   display: grid;
   height: 100%;
+  justify-items: center;
 `
 
 export const BottomImage = styled.img`
   height: 25px;
   justify-self: center;
-  padding-top: 8px;
   border-radius: ${props => props.round || '0px'};
 `
 export const BottomText = styled.div`

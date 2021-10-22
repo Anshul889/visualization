@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/crown.svg'
 import Home from '../../assets/home.svg'
 import Cart from '../../assets/shopping-cart.svg'
