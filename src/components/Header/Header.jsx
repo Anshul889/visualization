@@ -39,8 +39,8 @@ class Header extends React.Component {
             <StyledLink to='/wishlist'>
               <RightNavItem>Wishlist</RightNavItem>
             </StyledLink>
-            <StyledLink to='/cart'>
-              <RightNavItem>Cart</RightNavItem>
+            <StyledLink to='/settings'>
+              <RightNavItem>Settings</RightNavItem>
             </StyledLink>
             {this.props.currentUser ? (
               <StyledLink to='/profile'>

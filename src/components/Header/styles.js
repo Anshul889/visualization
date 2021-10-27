@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom"
-import styled from "styled-components"
+import { NavLink } from 'react-router-dom'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div``
 
@@ -73,7 +73,7 @@ export const BottomNavItem = styled.div`
 export const BottomImage = styled.img`
   height: 25px;
   justify-self: center;
-  border-radius: ${props => props.round || '0px'};
+  border-radius: ${(props) => props.round || '0px'};
 `
 export const BottomText = styled.div`
   font-size: 12px;
@@ -83,13 +83,15 @@ export const BottomText = styled.div`
 export const activeClassName = 'nav-item-active'
 
 export const StyledLink = styled(NavLink).attrs({ activeClassName })`
+  ${({ theme }) => css`
+    color: ${theme.colour.primary};
+  `}
   text-decoration: none;
-  color: black;
   &.${activeClassName} {
     font-weight: bold;
   }
   @media (max-width: 768px) {
-    opacity:  ${props => props.opacity || "0.7"};
+    opacity: ${(props) => props.opacity || '0.7'};
     &.${activeClassName} {
       opacity: 1;
     }

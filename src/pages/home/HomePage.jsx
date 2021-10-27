@@ -19,8 +19,10 @@ const HomePage = () => {
   // }
   return (
     <div>
+      <h1>Your Cards</h1>
       <button onClick={() => setCounter(counter + 1)}>Add</button>
       <button onClick={() => setCounter(counter - 1)}>Subtract</button>
+      <p>Heya</p>
       <div>
         {cart.map((cartitem) => {
           return (
