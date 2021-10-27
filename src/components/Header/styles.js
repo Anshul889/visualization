@@ -57,7 +57,10 @@ export const BottomNav = styled.div`
     bottom: 0;
     z-index: 1000;
     height: 56px;
-    background-color: white;
+    ${({ theme }) => css`
+      background-color: ${theme.colour.background};
+      color: ${theme.colour.primary};
+    `}
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

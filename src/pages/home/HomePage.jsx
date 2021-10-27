@@ -1,5 +1,4 @@
-import { getAuth } from '@firebase/auth'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const HomePage = () => {
   const [counter, setCounter] = useState(0)
@@ -8,10 +7,6 @@ const HomePage = () => {
     { id: 2, name: '3080', price: 80000, quantity: 12 },
     { id: 3, name: '3090', price: 40000, quantity: 15 },
   ])
-  useEffect(() => {
-    const auth = getAuth()
-    console.log(auth.currentUser)
-  }, [])
 
   // let totalamount = 0
   // for (let i = 0; i < cart.length; i++) {

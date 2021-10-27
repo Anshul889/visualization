@@ -5,6 +5,7 @@ import Home from '../../assets/home.svg'
 import Cart from '../../assets/shopping-cart.svg'
 import User from '../../assets/user-circle.svg'
 import Heart from '../../assets/heart.svg'
+import chart from '../../assets/chart-line.svg'
 import { connect } from 'react-redux'
 import {
   BottomImage,
@@ -62,20 +63,20 @@ class Header extends React.Component {
           </StyledLink>
           <StyledLink to='/shop'>
             <BottomNavItem>
-              <BottomImage src={Home} />
+              <BottomImage src={chart} />
               <BottomText>Shop</BottomText>
             </BottomNavItem>
           </StyledLink>
           <StyledLink to='/wishlist'>
             <BottomNavItem>
               <BottomImage src={Heart} />
-              <BottomText>Wishlist</BottomText>
+              <BottomText>Saved</BottomText>
             </BottomNavItem>
           </StyledLink>
-          <StyledLink to='/cart'>
+          <StyledLink to='/settings'>
             <BottomNavItem>
               <BottomImage src={Cart} />
-              <BottomText>Cart</BottomText>
+              <BottomText>Settings</BottomText>
             </BottomNavItem>
           </StyledLink>
           {this.props.currentUser ? (
