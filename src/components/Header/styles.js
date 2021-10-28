@@ -57,6 +57,7 @@ export const BottomNav = styled.div`
     bottom: 0;
     z-index: 1000;
     height: 56px;
+    border-top: 1px solid lightgray;
     ${({ theme }) => css`
       background-color: ${theme.colour.background};
       color: ${theme.colour.primary};
@@ -69,7 +70,8 @@ export const BottomNav = styled.div`
 
 export const BottomNavItem = styled.div`
   display: grid;
-  height: 100%;
+  height: 90%;
+  padding-top: 5.6px;
   justify-items: center;
 `
 

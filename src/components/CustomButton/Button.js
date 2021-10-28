@@ -12,7 +12,6 @@ export const Button = styled.button`
   background-color: ${props => props.white ? "white" : "black"};
   color: ${props => props.white ? "black" : "white"};
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
   font-weight: bolder;
   border: 2px solid black;
   cursor: pointer;
