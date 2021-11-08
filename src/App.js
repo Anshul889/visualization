@@ -37,18 +37,20 @@ class App extends React.Component {
     if (theme === 'light') {
       selectedTheme = {
         colour: {
-          primary: '#000000',
-          secondary: '#444B6E',
+          color: '#29304D',
+          secondary: '#2573D5',
           background: '#FFFFFF',
+          backgroundSecondary: '#F7F9FC',
           link: '#9AB87A',
         },
       }
     } else {
       selectedTheme = {
         colour: {
-          primary: '#FFFFFF',
+          color: '#FFFFFF',
           secondary: '#444B6E',
-          background: '#000000',
+          background: '#29304D',
+          backgroundSecondary: '#2573D5',
           link: '#9AB87A',
         },
       }

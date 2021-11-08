@@ -60,7 +60,7 @@ export const BottomNav = styled.div`
     border-top: 1px solid lightgray;
     ${({ theme }) => css`
       background-color: ${theme.colour.background};
-      color: ${theme.colour.primary};
+      color: ${theme.colour.color};
     `}
     width: 100%;
     display: grid;
@@ -89,7 +89,7 @@ export const activeClassName = 'nav-item-active'
 
 export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   ${({ theme }) => css`
-    color: ${theme.colour.primary};
+    color: ${theme.colour.color};
   `}
   text-decoration: none;
   &.${activeClassName} {

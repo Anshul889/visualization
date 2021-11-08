@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const Button = styled.button`
@@ -9,18 +8,27 @@ export const Button = styled.button`
   line-height: 48px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: ${props => props.white ? "white" : "black"};
-  color: ${props => props.white ? "black" : "white"};
   text-transform: uppercase;
   font-weight: bolder;
-  border: 2px solid black;
   cursor: pointer;
   display: block;
+  border: none;
   margin: 20px 0;
-
+  background: #2573d5;
+  color: white;
+  border-radius: 10px;
   &:hover {
-    background-color:  ${props => props.white ? "black" : "white"};
-    color:  ${props => props.white ? "white" : "black"};
-    border: 2px solid black;
+    background-color: #1e5ca9;
+    color: white;
+    border: none;
+  }
+`
+
+export const SecondaryButton = styled(Button)`
+  background-color: #e6e6e6;
+  color: #29304d;
+  &:hover {
+    background-color: #cccccc;
+    color: #29304d; 
   }
 `

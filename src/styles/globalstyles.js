@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Poppins Medium';
       font-size: 16px;
       ${({ theme }) => css`
-        color: ${theme.colour.primary};
+        color: ${theme.colour.color};
         background-color: ${theme.colour.background} ;
       `}
     }

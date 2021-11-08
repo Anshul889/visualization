@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Logo from '../../assets/crown.svg'
 import Home from '../../assets/home.svg'
 import HomeLight from '../../assets/home-light.svg'
-import Cart from '../../assets/shopping-cart.svg'
 import User from '../../assets/user-circle.svg'
 import UserLight from '../../assets/user-circle-light.svg'
 import Heart from '../../assets/heart.svg'
@@ -41,10 +40,10 @@ class Header extends React.Component {
           </LeftNav>
           <RightNav>
             <StyledLink to='/shop'>
-              <RightNavItem>Shop</RightNavItem>
+              <RightNavItem>Explore</RightNavItem>
             </StyledLink>
-            <StyledLink to='/wishlist'>
-              <RightNavItem>Wishlist</RightNavItem>
+            <StyledLink to='/bookmarks'>
+              <RightNavItem>Bookmarks</RightNavItem>
             </StyledLink>
             <StyledLink to='/settings'>
               <RightNavItem>Settings</RightNavItem>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from '../../components/CustomButton/Button'
 import { setTheme } from '../../redux/theme/theme.action'
 
 const mapStateToProps = (state) => ({
@@ -16,8 +17,8 @@ const Settings = ({ setTheme, theme }) => {
   }
   return (
     <div>
-      {theme === 'dark' && <button onClick={() => changeTheme('light')}>Light</button>}
-      {theme === 'light' && <button onClick={() => changeTheme('dark')}>Dark</button>}
+      {theme === 'dark' && <Button onClick={() => changeTheme('light')}>Light</Button>}
+      {theme === 'light' && <Button onClick={() => changeTheme('dark')}>Dark</Button>}
       <div></div>
     </div>
   )
