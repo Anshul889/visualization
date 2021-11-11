@@ -57,10 +57,10 @@ export const BottomNav = styled.div`
     bottom: 0;
     z-index: 1000;
     height: 56px;
-    border-top: 1px solid lightgray;
     ${({ theme }) => css`
       background-color: ${theme.colour.background};
       color: ${theme.colour.color};
+      border-top: ${theme.colour.border};
     `}
     width: 100%;
     display: grid;

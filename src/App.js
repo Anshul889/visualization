@@ -42,6 +42,7 @@ class App extends React.Component {
           background: '#FFFFFF',
           backgroundSecondary: '#F7F9FC',
           link: '#9AB87A',
+          border: '1px solid lightgray'
         },
       }
     } else {
@@ -52,6 +53,7 @@ class App extends React.Component {
           background: '#29304D',
           backgroundSecondary: '#2573D5',
           link: '#9AB87A',
+          border: '1px solid #d3d3d382'
         },
       }
     }
