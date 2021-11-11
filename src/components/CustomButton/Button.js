@@ -25,10 +25,10 @@ export const Button = styled.button`
 `
 
 export const SecondaryButton = styled(Button)`
-  background-color: #e6e6e6;
+  background-color: #f7f9fc;
   color: #29304d;
   &:hover {
-    background-color: #cccccc;
+    background-color: #e0e0e0;
     color: #29304d; 
   }
 `
