@@ -39,7 +39,7 @@ class Header extends React.Component {
             <Title>Crown Clothing</Title>
           </LeftNav>
           <RightNav>
-            <StyledLink to='/shop'>
+            <StyledLink to='/explore'>
               <RightNavItem>Explore</RightNavItem>
             </StyledLink>
             <StyledLink to='/bookmarks'>
@@ -67,7 +67,7 @@ class Header extends React.Component {
                 <BottomText>Home</BottomText>
               </BottomNavItem>
             </StyledLink>
-            <StyledLink to='/shop'>
+            <StyledLink to='/explore'>
               <BottomNavItem>
                 <BottomImage src={chart} />
                 <BottomText>Explore</BottomText>
@@ -113,7 +113,7 @@ class Header extends React.Component {
                 <BottomText>Home</BottomText>
               </BottomNavItem>
             </StyledLink>
-            <StyledLink to='/shop'>
+            <StyledLink to='/explore'>
               <BottomNavItem>
                 <BottomImage src={chartlight} />
                 <BottomText>Explore</BottomText>

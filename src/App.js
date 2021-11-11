@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import './App.css'
 import Header from './components/Header/Header'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
+import Explore from './pages/Explore/Explore'
 import HomePage from './pages/home/HomePage'
 import Profile from './pages/Profile/Profile'
 import Settings from './pages/Settings/Settings'
@@ -68,6 +69,7 @@ class App extends React.Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/settings' component={Settings} />
             <Route path='/profile' component={Profile} />
+            <Route path='/explore' component={Explore} />
           </Switch>
         </div>
       </ThemeProvider>
