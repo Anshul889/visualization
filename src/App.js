@@ -11,6 +11,7 @@ import Profile from './pages/Profile/Profile'
 import Settings from './pages/Settings/Settings'
 import SignIn from './pages/SignIn/SignIn'
 import SignUp from './pages/SignUp/SignUp'
+import { fetchProducts } from './redux/product/product.action'
 import { setCurrentUser } from './redux/user/user.action'
 import GlobalStyle from './styles/globalstyles'
 
@@ -19,11 +20,12 @@ const mapStateToProps = (state) => ({
 })
 const actions = {
   setCurrentUser,
+  fetchProducts,
 }
 
 class App extends React.Component {
   componentDidMount() {
-    const { setCurrentUser } = this.props
+    const { setCurrentUser, fetchProducts } = this.props
 
     auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -31,6 +33,7 @@ class App extends React.Component {
       }
       setCurrentUser(userAuth)
     })
+    fetchProducts()
   }
   render() {
     const { theme } = this.props

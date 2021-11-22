@@ -7,7 +7,8 @@ export const addProduct = (product) => async (dispatch) => {
     name: product.name,
     price: parseInt(product.price),
   })
-  dispatch({type: ADD_PRODUCT, payload: product})
+  let newProduct = {...product, id: docRef.id}
+  dispatch({type: ADD_PRODUCT, payload: newProduct})
   console.log('Document written with ID: ', docRef.id)
 }
 

@@ -1,23 +1,20 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Button } from '../../components/CustomButton/Button'
-import { deleteProduct, fetchProducts } from '../../redux/product/product.action'
+import {
+  deleteProduct,
+} from '../../redux/product/product.action'
 import AddProduct from './AddProduct'
 
 const mapStateToProps = (state) => ({
   products: state.products,
 })
 const actions = {
-  fetchProducts,
-  deleteProduct
+  deleteProduct,
 }
 
-const Explore = ({ fetchProducts, products, deleteProduct }) => {
-  useEffect(() => {
-    if (products.length === 0) {
-      fetchProducts()
-    }
-  }, [products])
+const Explore = ({ products, deleteProduct }) => {
+  useEffect(() => {}, [products])
 
   return (
     <div>
@@ -27,6 +24,7 @@ const Explore = ({ fetchProducts, products, deleteProduct }) => {
             return (
               <div key={index}>
                 <div>{product.name}</div>
+                <div>{product.price}</div>
                 <Button onClick={() => deleteProduct(product)}>Remove</Button>
               </div>
             )

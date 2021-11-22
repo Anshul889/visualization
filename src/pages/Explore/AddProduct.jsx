@@ -38,6 +38,7 @@ const AddProduct = ({ addProduct }) => {
         key='name'
         name='name'
         placeholder='Name'
+        type='date'
         onChange={handleChange}
       />
       <input
