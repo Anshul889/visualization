@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import './App.css'
 import Header from './components/Header/Header'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
+import Bookmarks from './pages/Bookmarks/Bookmarks'
 import Explore from './pages/Explore/Explore'
 import HomePage from './pages/home/HomePage'
 import Profile from './pages/Profile/Profile'
@@ -73,6 +74,7 @@ class App extends React.Component {
             <Route path='/settings' component={Settings} />
             <Route path='/profile' component={Profile} />
             <Route path='/explore' component={Explore} />
+            <Route path='/bookmarks' component={Bookmarks} />
           </Switch>
         </div>
       </ThemeProvider>

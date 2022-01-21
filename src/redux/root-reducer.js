@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import counterReducer from './counter/counter.reducer'
 import productReducer from './product/product.reducer'
 import themeReducer from './theme/theme.reducer'
 
@@ -15,7 +16,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   user: userReducer,
   theme: themeReducer,
-  products: productReducer
+  products: productReducer,
+  counter : counterReducer
 })
 
 export default persistReducer(persistConfig, rootReducer)
