@@ -1,2 +1,4 @@
+export const GET_COUNTER = 'GET_COUNTER';
 export const ADD_NUMBER = 'ADD_NUMBER';
 export const SUBTRACT_NUMBER = 'SUBTRACT_NUMBER';
+export const RESET_COUNTER = 'RESET_COUNTER';

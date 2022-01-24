@@ -15,7 +15,7 @@ export const addProduct = (product) => async (dispatch) => {
 export const deleteProduct = (product) => async(dispatch) => {
   console.log(product.name)
   try{
-  const docRef = await deleteDoc(doc(db, 'products', `${product.id}`));
+   await deleteDoc(doc(db, 'products', `${product.id}`));
   } catch(error){
     console.log(error)
   }
